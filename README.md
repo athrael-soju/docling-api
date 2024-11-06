@@ -14,3 +14,8 @@ curl -X POST http://localhost:8000/convert -H "Content-Type: multipart/form-data
 ```
 
 Or access the API docs at http://localhost:8000/docs
+
+
+## Demo (x2 speed)
+
+![demo](./demo.gif)

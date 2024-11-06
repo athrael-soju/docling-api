@@ -9,5 +9,8 @@ COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-cache
 
 COPY app.py ./
+COPY download_models.py ./
+
+RUN /app/.venv/bin/python download_models.py
 
 CMD ["/app/.venv/bin/fastapi", "run", "app.py", "--port", "8000", "--host", "0.0.0.0"]

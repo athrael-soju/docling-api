@@ -4,6 +4,7 @@
 
 ```
 docker compose up
+docker compose up -f docker-compose.gpu.yml up  # for GPU
 ```
 
 ## Request

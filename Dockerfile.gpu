@@ -1,0 +1,25 @@
+FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
+
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && apt-get install -y tzdata
+ENV TZ Asia/Tokyo
+
+RUN apt update && apt install software-properties-common -y
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt update && apt install -y python3.12 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
+
+WORKDIR /app
+
+COPY pyproject.toml uv.lock ./
+
+RUN uv sync --frozen --no-cache
+
+COPY app.py ./
+COPY download_models.py test.pdf ./
+
+RUN /app/.venv/bin/python download_models.py && rm download_models.py test.pdf
+
+CMD ["/app/.venv/bin/fastapi", "run", "app.py", "--port", "8000", "--host", "0.0.0.0"]

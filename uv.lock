@@ -167,7 +167,7 @@ wheels = [
 
 [[package]]
 name = "docling"
-version = "2.4.0"
+version = "2.5.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -192,9 +192,9 @@ dependencies = [
     { name = "scipy" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ec/7f/d7e0fd062dde1ef605cd53a3202592f850fcaa96929ee53da31a945b9486/docling-2.4.0.tar.gz", hash = "sha256:5edf628c85a3aadf5081b96089d2ee82854e067c842917319ed9590e043e42e5", size = 64489 }
+sdist = { url = "https://files.pythonhosted.org/packages/50/bb/cd997f4d84b3c59bf97345c79251f9681ad0eec5a040b162a05bf96f4316/docling-2.5.2.tar.gz", hash = "sha256:2850eda7269865e66bc81fc3496949e6edc1413cba051e61f107b744ef4cebbe", size = 65398 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cf/f6/7fb481324225cbfe6c1906eece28254eec4673eb9be20022024f27554175/docling-2.4.0-py3-none-any.whl", hash = "sha256:2c67b1f0ea534ee4292a0521dda1d0fd0b05a1d726d19995a45df34c85c64850", size = 83721 },
+    { url = "https://files.pythonhosted.org/packages/b5/f0/ea642a2247c3fe59e86bcd7425bc13f5b85b0490ebbc384692b7dfa5d196/docling-2.5.2-py3-none-any.whl", hash = "sha256:0d4d1e57c0f2e98fd150a3444cd6f8a6794de952d2336ba1cbbf68096827e4b7", size = 84431 },
 ]
 
 [[package]]
@@ -209,7 +209,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "docling", specifier = ">=2.4.0" },
+    { name = "docling", specifier = ">=2.5.2" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.115.4" },
     { name = "pypdf", specifier = ">=5.1.0" },
 ]

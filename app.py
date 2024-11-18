@@ -17,6 +17,12 @@ class ConvertPagesResponse(BaseModel):
 
 app = FastAPI()
 
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+
 @app.post("/convert")
 async def convert(file: UploadFile = File(...)) -> ConvertResponse:
     converter = DocumentConverter()
